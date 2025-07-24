@@ -1,21 +1,11 @@
-🧬 Vitamin Deficiency Detection
+# Vitamin deficiency predicted by machine-learning
 
-This project aims to detect vitamin deficiencies in individuals using machine learning and/or image analysis techniques. It uses health data or facial images to identify common deficiencies such as Vitamin D, Vitamin B12, Iron, and more.
+This repository contains codes used to produce most of the machine-learning results of the following paper.
 
-📌 Objective
+* **Efficient Prediction of Vitamin B Deficiencies via Machine-learning Using Routine Blood Test Results in Patients With Intense Psychiatric Episode**. Hidetaka Tamune\*, Jumpei Ukita\*, Yu Hamamoto, Hiroko Tanaka, Kenji Narushima and Naoki Yamamoto. *Frontiers in Psychiatry*, 2020. [Paper Link](https://www.frontiersin.org/articles/10.3389/fpsyt.2019.01029/abstract). (\*: co-first author)
 
-To develop a predictive system that can :
-
-1. Identify probable vitamin deficiencies early
-2. Suggest recommendations for supplements/diet
-3. Aid in preventive healthcare
-
-📊 Features Considered : 
-
-Age, gender
-Symptoms: fatigue, hair loss, mood swings
-Blood metrics: hemoglobin, iron, Vitamin D/B12 levels
-Dietary habits
-Skin/facial indicators (for image-based)
-
-
+## Usage
+1. Modify `load_dataset` in `data_utils.py` to read the dataset.
+2. Optimize hyperparameters by running `grid_search.py`.
+3. Calculate the prediction accuracy: e.g. `python test.py --target folate --modelType rf`
+4. To estimate the sample size necessary for a high prediction accuracy, run `sample_size.py`
